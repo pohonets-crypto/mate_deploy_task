@@ -2,6 +2,15 @@
 
 Welcome to the AWS EC2 deployment guide for our project! This comprehensive tutorial will walk you through the entire process of deploying your application on an AWS EC2 instance. By following these steps, you'll set up a robust and scalable environment tailored to your project's needs.
 
+## Link to Deployed Project
+
+http://3.122.67.27/docs
+
+## Credentials
+
+Username: mate_user
+Password: FkVoD8uJ1vznAIV
+
 ### What You'll Learn
 
 - **AWS Account Registration:** How to create and set up your AWS account.
@@ -2295,3 +2304,6 @@ After ensuring that your `deploy.sh` script works correctly and that Docker Comp
 - **CD Pipeline**: Automates the deployment of the application to AWS EC2 upon successful tests, ensuring that the latest changes are live in production.
 
 By leveraging GitHub Actions for both CI and CD, you ensure a robust and automated workflow that maintains high code standards and facilitates smooth deployments.
+#   m a t e _ d e p l o y _ t a s k 
+ 
+ 
