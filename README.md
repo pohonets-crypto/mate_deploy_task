@@ -18,4 +18,10 @@ A scalable FastAPI-based backend for managing theater-related data, including us
 https://github.com/pohonets-crypto/mate_deploy_task
 cd mate_deploy_task
 
+```
+
+### Build and start the Docker containers:
+
+```shell
 docker compose -f docker-compose-prod.yml up -d --build
+```
