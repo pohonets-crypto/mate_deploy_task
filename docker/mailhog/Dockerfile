@@ -7,14 +7,18 @@ RUN apt update && apt install -y  \
     dos2unix \
     && apt clean
 
-# Install MailHog using Go
-RUN go install github.com/mailhog/MailHog@latest
+RUN wget https://go.dev/dl/go1.24.0.linux-amd64.tar.gz && \
+    tar -C /usr/local -xzf go1.24.0.linux-amd64.tar.gz && \
+    rm go1.24.0.linux-amd64.tar.gz
 
-# Add Go's bin directory to the PATH to make MailHog executable globally
-ENV PATH="/root/go/bin:$PATH"
+ENV PATH="/usr/local/go/bin:/root/go/bin:$PATH"
+
+RUN go install github.com/mailhog/MailHog@latest
 
 # Copy the commands directory into the container
 COPY commands/setup_mailhog_auth.sh /commands/setup_mailhog_auth.sh
 
 # Ensure all scripts in the commands directory have Unix-style line endings and are executable
 RUN dos2unix /commands/setup_mailhog_auth.sh && chmod +x /commands/setup_mailhog_auth.sh
+
+CMD ["MailHog"]
