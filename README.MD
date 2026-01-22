@@ -9,6 +9,7 @@ http://3.122.67.27/docs
 ## Credentials
 
 Username: mate_user
+
 Password: FkVoD8uJ1vznAIV
 
 ### What You'll Learn
